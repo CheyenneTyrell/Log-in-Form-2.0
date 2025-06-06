@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>The Beharie Girls</h1>
+        <p>Welcome, Please Log in Using your assigned Credentials.</p>
+
+        <form>
+            <label for="usernameInput">Username:</label><input type="text" id="usernameInput"/><br/>
+            <label for="passwordInput">Password:</label><input type="password" id="passwordInput"/><br/>
+            <p id="message"></p>
+            <br/><br/>
+            <a href="#" onclick="verifyUser()">Log In</a>
+        </form>
+        <script>
+            
+           function verifyUser(){
+                    var username = document.getElementById("usernameInput").value;
+                    var password = document.getElementById("passwordInput").value;
+
+                    checkUserCreds(username, password);
+            }
+        function checkUserCreds(username, password){
+                    var systemUsername = "Cheliyah24";
+                    var systemPassword = "Chelanah07";
+
+            if(username == systemUsername && password == systemPassword){
+            document.getElementById("message").innerHTML = "Correct. Loggin you in...";
+        } else 
+            document.getElementById("message").innerHTML = "Username or password are incorrect Please enter correct details!";
+        }
+            
+        </script>
+
+    </body>
+</html>
